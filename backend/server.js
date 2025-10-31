@@ -2,12 +2,16 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const { connectDB } = require("./src/config/db");
 const { PORT } = require("./src/config/config");
+const cors = require("cors");
+
 
 const experienceRoutes = require("./src/routes/experienceRoutes");
 const bookingRoutes = require("./src/routes/bookingRoutes");
 const promoRoutes = require("./src/routes/promoRoutes");
 
 const app = express();
+
+app.use(cors());
 app.use(bodyParser.json());
 
 connectDB();
