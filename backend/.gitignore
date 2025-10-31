@@ -1,0 +1,5 @@
+*logs
+.env
+/src/seed.js
+node_modules
+package-lock.json
